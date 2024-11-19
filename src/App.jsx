@@ -9,6 +9,7 @@ import Home from './Pages/Home/Home';
 import Blogs from './Pages/Blogs/Blogs';
 import BlogDetailPage from './Pages/Blogs/BlogDetailPage';
 import Services from './Pages/Home/services';
+import ChatBotComponent from './components/Bot';
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,7 +79,9 @@ const App = () => {
             <p>Phone: +91 1234567890</p>
           </div>
         </div>
+        <ChatBotComponent/>
       </footer>
+      
     </Router>
   );
 };
