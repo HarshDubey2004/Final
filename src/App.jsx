@@ -8,8 +8,8 @@ import GetContact from './Pages/GetContact';
 import Home from './Pages/Home/Home';
 import Blogs from './Pages/Blogs/Blogs';
 import BlogDetailPage from './Pages/Blogs/BlogDetailPage';
-import Services from './Pages/Home/services';
-import ChatBotComponent from './components/Bot';
+import services from './Pages/Home/services'
+
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,7 +36,7 @@ const App = () => {
       <Routes>
         {/* Homepage route */}
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<services />} />
         <Route path="/LearnMore" element={<LearnMore />} />
         <Route path="/Contact" element={<GetContact />} />
         <Route path="/blogs" element={<Blogs/>} />
@@ -79,7 +79,7 @@ const App = () => {
             <p>Phone: +91 1234567890</p>
           </div>
         </div>
-        <ChatBotComponent/>
+        
       </footer>
       
     </Router>

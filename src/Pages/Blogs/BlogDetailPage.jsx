@@ -18,7 +18,7 @@ const BlogDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-6">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden ">
         <img
           src={blog.imageUrl}
           alt={blog.title}
