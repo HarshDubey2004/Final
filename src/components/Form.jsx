@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import axios
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,11 +20,19 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here (e.g., API calls)
+    try {
+      const response = await axios.post('http://localhost:5000/api/submit', formData);
+      if (response.status === 200) {
+        setIsSubmitted(true);
+        console.log('Form submitted:', formData);
+      } else {
+        console.error('Error submitting form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
@@ -85,6 +94,7 @@ const ContactForm = () => {
                 >
                   {/* Options can be dynamically generated or sourced from a list */}
                   <option value="+500">SOU (+500)</option>
+                  <option value="+91">IND (+91)</option>
                   <option value="+1473">GRE (+1473)</option>
                   <option value="+41">SWI (+41)</option>
                   {/* Add other options as needed */}

@@ -11,7 +11,7 @@ import BlogDetailPage from './Pages/Blogs/BlogDetailPage';
 import Services from './Pages/Home/Services'
 import Career from './Pages/Home/Career';
 import About from './Pages/Home/About';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 
 const App = () => {
   useEffect(() => {
