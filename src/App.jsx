@@ -9,6 +9,8 @@ import Home from './Pages/Home/Home';
 import Blogs from './Pages/Blogs/Blogs';
 import BlogDetailPage from './Pages/Blogs/BlogDetailPage';
 import Services from './Pages/Home/services';
+import Career from './Pages/Home/Career';
+import About from './Pages/Home/About';
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,6 +41,8 @@ const App = () => {
         <Route path="/LearnMore" element={<LearnMore />} />
         <Route path="/Contact" element={<GetContact />} />
         <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/career" element={<Career/>} />
+        <Route path="/about" element={<About/>} />
         <Route path="/blog/:id" element={<BlogDetailPage />} />
       </Routes>
 
