@@ -23,7 +23,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://final-backend-upj0.onrender.com/api/submit', formData);
+      const response = await axios.post('http://localhost:5000/api/submit', formData);
       if (response.status === 200) {
         setIsSubmitted(true);
         console.log('Form submitted:', formData);
