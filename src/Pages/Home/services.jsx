@@ -1,5 +1,5 @@
 import React from 'react';
-import './Services.css';
+import './services.css';
 
 function Services() {
   return (
@@ -42,7 +42,7 @@ function Services() {
           <div className="card">
             <h3 className="card_title">Social Media Management</h3>
             <p className="card_text">
-              Building and managing your brand’s presence across major social platforms.
+              Building and managing your brands presence across major social platforms.
             </p>
           </div>
           <div className="card">

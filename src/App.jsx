@@ -8,7 +8,10 @@ import GetContact from './Pages/GetContact';
 import Home from './Pages/Home/Home';
 import Blogs from './Pages/Blogs/Blogs';
 import BlogDetailPage from './Pages/Blogs/BlogDetailPage';
-import services from './Pages/Home/services'
+import Services from './Pages/Home/Services'
+import Career from './Pages/Home/Career';
+import About from './Pages/Home/About';
+import Navbar from './components/Navbar';
 
 const App = () => {
   useEffect(() => {
@@ -31,15 +34,18 @@ const App = () => {
           <li><Link to="/contact" className="contact">Get in Touch</Link></li>
         </ul>
       </nav>
+      
 
       {/* Setting up Routes */}
       <Routes>
         {/* Homepage route */}
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<services />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/LearnMore" element={<LearnMore />} />
         <Route path="/Contact" element={<GetContact />} />
         <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/career" element={<Career/>} />
+        <Route path="/about" element={<About/>} />
         <Route path="/blog/:id" element={<BlogDetailPage />} />
       </Routes>
 

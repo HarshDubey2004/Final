@@ -135,7 +135,8 @@ const Blogs = () => {
         </div>
       </div>
 
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-16" id="blog-container"
+            ref={blogContainerRef}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -151,8 +152,7 @@ const Blogs = () => {
           {/* Blog Grid */}
           <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
-            id="blog-container"
-            ref={blogContainerRef}
+            
           >
             {filteredBlogs.length > 0 ? (
               filteredBlogs.map((blog) => (
